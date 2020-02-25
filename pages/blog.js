@@ -6,7 +6,7 @@ const PostLink = props => {
   return (
     <li>
       <Link href={`/p/[id]`} as={`/p/${props.id}`}>
-        {props.id}
+        <a>{props.id}</a>
       </Link>
     </li>
   );

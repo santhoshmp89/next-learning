@@ -13,6 +13,9 @@ export default () => {
       <Link href="/blog">
         <a>Blog</a>
       </Link>
+      <Link href="/shows">
+        <a>Shows</a>
+      </Link>
     </div>
   );
 };
