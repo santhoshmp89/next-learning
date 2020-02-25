@@ -1,14 +1,20 @@
 import Layout from "../components/Layout";
 import fetch from "isomorphic-unfetch";
+import Link from "next/link";
 
 const Shows = props => {
-  console.log("Shows props", props);
   return (
     <Layout>
       <h1>Today's Show</h1>
       <ul>
         {props.shows.map(show => {
-          return <li key={show.name}>{show.name}</li>;
+          return (
+            <Link href={`/show/[id]`} as={`/show/${show.id}`}>
+              <a>
+                <li key={show.id}>{show.name}</li>
+              </a>
+            </Link>
+          );
         })}
       </ul>
     </Layout>
